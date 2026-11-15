@@ -1,0 +1,71 @@
+site_name: DreamLuau
+site_description: An extensible Luau scripting framework for .NET and Godot.
+site_url: https://paopaogh.github.io/DreamLuau/
+repo_name: PaoPaoGH/DreamLuau
+repo_url: https://github.com/PaoPaoGH/DreamLuau
+edit_uri: edit/main/docs/
+
+theme:
+  name: materialx
+  font: false
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+plugins:
+  - search
+  - document-dates:
+      show_author: true
+      position: top
+      type: date
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Guides:
+      - Bindings: bindings.md
+      - Execution and lifecycle: execution.md
+      - Sandbox and modules: sandbox-modules.md
+      - Signals and tasks: signals-tasks.md
+      - Godot: godot.md
+  - Design:
+      - Architecture: architecture.md
+      - NuLua compatibility: nulua.md
