@@ -5,6 +5,10 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <PackageId>DreamLuau.NuLua</PackageId>
+    <PackageDescription>NuLua.Luau VM backend for DreamLuau.</PackageDescription>
+    <PackageTags>luau;lua;scripting;runtime;nulua</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../DreamLuau/DreamLuau.csproj" />

@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Authors>PaoPao</Authors>
+    <Company>PaoPao</Company>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/PaoPaoGH/DreamLuau</RepositoryUrl>
+    <PackageProjectUrl>https://paopaogh.github.io/DreamLuau/</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)LICENSE.md" Pack="true" PackagePath="\" />
+    <None Include="$(MSBuildThisFileDirectory)Readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

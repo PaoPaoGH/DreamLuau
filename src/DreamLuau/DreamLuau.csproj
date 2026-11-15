@@ -5,5 +5,9 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <PackageId>DreamLuau</PackageId>
+    <PackageDescription>Backend-neutral Luau scripting runtime for .NET.</PackageDescription>
+    <PackageTags>luau;lua;scripting;runtime;embedding</PackageTags>
   </PropertyGroup>
 </Project>

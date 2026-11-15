@@ -60,6 +60,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting started: getting-started.md
+  - NuGet: nuget.md
   - Guides:
       - Bindings: bindings.md
       - Execution and lifecycle: execution.md

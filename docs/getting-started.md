@@ -6,7 +6,7 @@
 - The DreamLuau solution and NuGet restore access.
 - Godot .NET 4.7 only when using `DreamLuau.Godot`.
 
-DreamLuau packages are not documented as published NuGet packages yet. To use the source in this repository, add project references to `DreamLuau.csproj` and `DreamLuau.NuLua.csproj` from your application.
+The packages are configured for NuGet but are not published yet. You can use project references from this checkout or build local packages as described in the [NuGet guide](nuget.md).
 
 ```powershell
 dotnet add path\to\YourApp.csproj reference .\src\DreamLuau\DreamLuau.csproj

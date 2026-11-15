@@ -5,6 +5,10 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <PackageId>DreamLuau.Godot</PackageId>
+    <PackageDescription>Godot .NET bridges and runtime lifecycle integration for DreamLuau.</PackageDescription>
+    <PackageTags>luau;lua;scripting;godot;godot4</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../DreamLuau/DreamLuau.csproj" />
