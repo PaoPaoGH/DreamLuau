@@ -13,17 +13,28 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write  # enable GitHub OIDC token issuance for this job
-    
+
     steps:
-      # Build your artifacts/my-sdk.nupkg package here
-    
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Pack NuGet packages
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          dotnet pack DreamLuau.sln --configuration Release --output ./artifacts -p:Version="$version"
+
       # Get a short-lived NuGet API key
       - name: NuGet login
         uses: NuGet/login@v1
         id: login
         with:
           user: ${{ secrets.NUGET_USER }}
-    
+
       # Push the package
       - name: NuGet push
-        run: dotnet nuget push artifacts/my-sdk.nupkg --api-key ${{steps.login.outputs.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push "./artifacts/*.nupkg" --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
